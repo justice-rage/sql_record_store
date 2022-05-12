@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-# describe '#Album' do
+describe '#Album' do
 
   describe('#save') do
     it("saves an album") do
@@ -67,4 +67,4 @@ require 'spec_helper'
     end
   end
 
-# end
+end
