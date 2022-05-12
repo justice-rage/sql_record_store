@@ -37,15 +37,15 @@ require 'spec_helper'
     end
   end
 
-#   describe('.find') do
-#     it("finds an album by id") do
-#       album = Album.new("Giant Steps", nil)
-#       album.save()
-#       album2 = Album.new("Blue", nil)
-#       album2.save()
-#       expect(Album.find(album.id)).to(eq(album))
-#     end
-#   end
+  describe('.find') do
+    it("finds an album by id") do
+      album = Album.new("Giant Steps", nil)
+      album.save()
+      album2 = Album.new("Blue", nil)
+      album2.save()
+      expect(Album.find(album.id)).to(eq(album))
+    end
+  end
 
 #   describe('#update') do
 #     it("updates an album by id") do
