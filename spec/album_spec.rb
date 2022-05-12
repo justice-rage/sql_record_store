@@ -2,15 +2,15 @@ require 'spec_helper'
 
 # describe '#Album' do
 
-#   describe('#save') do
-#     it("saves an album") do
-#       album = Album.new("Giant Steps", nil)
-#       album.save()
-#       album2 = Album.new("Blue", nil)
-#       album2.save()
-#       expect(Album.all).to(eq([album, album2]))
-#     end
-#   end
+  describe('#save') do
+    it("saves an album") do
+      album = Album.new("Giant Steps", nil)
+      album.save()
+      album2 = Album.new("Blue", nil)
+      album2.save()
+      expect(Album.all).to(eq([album, album2]))
+    end
+  end
 
   describe('.all') do
     it("returns an empty array when there are no albums") do
