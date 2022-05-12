@@ -19,7 +19,8 @@ class Album
   end
 
   def save
-    @@albums[self.id] = Album.new(self.name, self.id)
+    result = DB.exec("INSERT INTO albums (name) VALUES ('#{@name}') RETURNING id;")
+    @id = result.first().fetch("id").to_i
   end
 
   def ==(album_to_compare)
