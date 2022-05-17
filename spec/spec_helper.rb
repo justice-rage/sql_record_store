@@ -16,5 +16,3 @@ RSpec.configure do |config|
     DB.exec("DELETE FROM artists *;")
   end
 end
-© 2022 GitHub, Inc.
-Terms
