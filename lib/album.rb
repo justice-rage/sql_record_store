@@ -43,7 +43,12 @@ class Album
     DB.exec("UPDATE albums SET name = '#{@name}' WHERE id = #{@id};")
   end
 
-  def delete()
+  # def delete()
+  #   DB.exec("DELETE FROM albums WHERE id = #{@id};")
+  # end
+
+  def delete
     DB.exec("DELETE FROM albums WHERE id = #{@id};")
+    DB.exec("DELETE FROM songs WHERE album_id = #{@id};")
   end
 end
