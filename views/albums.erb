@@ -1,0 +1,28 @@
+<h1>Record Store 😩</h2>
+
+<h3>Available Records</h3>
+
+<% if @albums.any? %>
+  <ul>
+    <% @albums.each do |album| %>
+      <li><a href="/albums/<%= album.id %>"><%= album.name %></a></li>
+    <% end %>
+  </ul>
+  <% else %>
+    <p>There are currently no records to display.</p>
+  <% end %>
+
+  <a href="/albums/new">Add a new album</a>
+  <br>
+  <h3>Artist</h3>
+  <a href="/artists">Available artist</a>
+    <br>
+      <br>
+
+  <form action="/results" method="post">
+  <div class="form-group">
+    <label for="search">Search</label>
+    <input id="search" name="search" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn">Go!</button>
+</form>
